@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{C4DC69DD-CD98-1777-2A11-67FF68AF960B}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_1;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\SourceCode\AI\AStar.cs" />
+     <Compile Include="Assets\SourceCode\AI\Computer AI\AILowLevel.cs" />
+     <Compile Include="Assets\SourceCode\AI\DataStructures\Point.cs" />
+     <Compile Include="Assets\SourceCode\AI\DataStructures\PriorityQueue.cs" />
+     <Compile Include="Assets\SourceCode\AI\GridNode.cs" />
+     <Compile Include="Assets\SourceCode\Camera\CameraControl.cs" />
+     <Compile Include="Assets\SourceCode\GUI\GUIManager.cs" />
+     <Compile Include="Assets\SourceCode\Input\InputManager.cs" />
+     <Compile Include="Assets\SourceCode\Player\Player.cs" />
+     <Compile Include="Assets\SourceCode\ProjectMain.cs" />
+     <Compile Include="Assets\SourceCode\Terrain\TerrainManager.cs" />
+     <Compile Include="Assets\SourceCode\Terrain\TerrainUnit.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Aircraft\Aircraft.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Aircraft\F16.cs" />
+     <Compile Include="Assets\SourceCode\Unit\AntiAircraft\AntiAircraft.cs" />
+     <Compile Include="Assets\SourceCode\Unit\AntiAircraft\Avenger.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Artillery\Artillery.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Artillery\M109.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Helicopter\Apache.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Helicopter\Cobra.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Helicopter\Helicopter.cs" />
+     <Compile Include="Assets\SourceCode\Unit\LightVehicle\Humvee.cs" />
+     <Compile Include="Assets\SourceCode\Unit\LightVehicle\LightVehicle.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Tank\M1Abrams.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Tank\Merkava4.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Tank\Tank.cs" />
+     <Compile Include="Assets\SourceCode\Unit\Unit.cs" />
+     <Compile Include="Assets\SourceCode\Unit\UnitManager.cs" />
+     <Compile Include="Assets\SourceCode\Weapon\AGM.cs" />
+     <Compile Include="Assets\SourceCode\Weapon\ArtilleryShell.cs" />
+     <Compile Include="Assets\SourceCode\Weapon\Stinger.cs" />
+     <Compile Include="Assets\SourceCode\Weapon\TankProjectile.cs" />
+     <Compile Include="Assets\SourceCode\Weapon\Weapon.cs" />
+     <Compile Include="Assets\SourceCode\Weapon\WeaponManager.cs" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{978551A4-B991-1759-77CE-149FD5951A8A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{79998EAD-5F17-D6A4-A494-CC85461A0D9C}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
